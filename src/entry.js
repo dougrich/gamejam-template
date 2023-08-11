@@ -30,6 +30,6 @@
  */
 window.addEventListener('load', () => {
   const d = document.createElement('div')
-  d.innerText = 'Hello World'
+  d.innerText = 'Hello World, from a template for online gamejams'
   document.body.appendChild(d)
 })
