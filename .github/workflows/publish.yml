@@ -4,6 +4,7 @@ on: workflow_dispatch
 permissions:
   contents: write
   packages: write
+  id-token: write
 jobs:
   publish:
     runs-on: ubuntu-latest
