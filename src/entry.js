@@ -1,9 +1,10 @@
 /**
- * Bootstrap
+ * Bootstrap - check for core dependencies
  */
 {
   const errors = [
-    () => { if (!global.window) throw new Error('Missing window object') }
+    // check that we are client side
+    () => { if (typeof window === 'undefined') throw new Error('Missing window object') }
   ].reduce((errors, check, index) => {
     try {
       check()
@@ -23,3 +24,12 @@
     throw new Error('Error occured during bootstrap - see console for details')
   }
 }
+
+/**
+ * Bootstrap - startup game
+ */
+window.addEventListener('load', () => {
+  const d = document.createElement('div')
+  d.innerText = 'Hello World'
+  document.body.appendChild(d)
+})
