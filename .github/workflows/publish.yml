@@ -22,7 +22,7 @@ jobs:
           npm audit --omit=dev
           npm test
 
-          npm standard-version
+          npm run standard-version
 
           npm publish
           git push --follow-tags
