@@ -36,3 +36,10 @@ jobs:
         with:
           path: './dist'
       - uses: actions/deploy-pages@v2
+      - uses: manleydev/butler-publish-itchio-action@master
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+          CHANNEL: ${{ secrets.ITCH_CHANNEL }}
+          ITCH_GAME: ${{ secrets.ITCH_GAME }}
+          ITCH_USER: ${{ secrets.ITCH_USER }}
+          PACKAGE: dist
