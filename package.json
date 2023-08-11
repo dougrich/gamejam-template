@@ -1,6 +1,6 @@
 {
   "name": "@dougrich/gamejam-template",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Gamejam template",
   "main": "index.js",
   "scripts": {
